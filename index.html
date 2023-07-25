@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -24,21 +24,136 @@
       tailwind.config = {
         theme: {
           extend: {
+            backgroundImage:{
+                'hero-bg': "url('./images/banner.png')",
+            },
             colors: {
               clifford: "#da373d",
+              'nav-item-clr': '#707070',
+              'primary-bg': '#B68C5A',
             },
           },
         },
       };
     </script>
     <style>
-        .ff-poppins{
-            font-family: 'Poppins', sans-serif;
-        }
-        .ff-eb_garamond{
-            font-family: 'EB Garamond', serif;
-        }
+      .ff-poppins {
+        font-family: "Poppins", sans-serif;
+      }
+      .ff-eb_garamond {
+        font-family: "EB Garamond", serif;
+      }
     </style>
   </head>
-  <body></body>
+  <body>
+    <header class="max-w-[1200px] mx-auto px-3 sm:px-5 my-6 min-h-[calc(100vh - my-6)]">
+        <!-- navbar section  -->
+      <nav class="navbar ff-poppins justify-between flex-col md:flex-row gap-5">
+        <div class="">
+          <div class="dropdown">
+            <label tabindex="0" class="btn btn-ghost lg:hidden">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-5 w-5"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h8m-8 6h16"
+                />
+              </svg>
+            </label>
+            <ul
+              tabindex="0"
+              class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+            >
+            <li class="text-base text-nav-item-clr">
+                <a>Home</a>
+            </li>
+            <li>
+              <a class="text-base text-nav-item-clr">
+                Services
+                <img src="./images/right-angle.svg" />
+              </a>
+            </li>
+            <li>
+              <a class="text-base text-nav-item-clr">
+                Cases
+                <img src="./images/right-angle.svg" />
+              </a>
+            </li>
+            <li>
+              <a class="text-base text-nav-item-clr">
+                Blog
+                <img src="./images/right-angle.svg" />
+              </a>
+            </li>
+            <li>
+              <a class="text-base text-nav-item-clr">
+                Contact Us
+                <img src="./images/right-angle.svg" />
+              </a>
+            </li>
+            </ul>
+          </div>
+          <a class="normal-case text-xl">
+            <img src="./images/logo2.png" alt="logo image" />
+          </a>
+        </div>
+        <div class=" hidden lg:flex">
+          <ul class="menu menu-horizontal px-1">
+            <li class="text-base text-nav-item-clr">
+                <a>Home</a>
+            </li>
+            <li>
+              <a class="text-base text-nav-item-clr">
+                Services
+                <img src="./images/right-angle.svg" />
+              </a>
+            </li>
+            <li>
+              <a class="text-base text-nav-item-clr">
+                Cases
+                <img src="./images/right-angle.svg" />
+              </a>
+            </li>
+            <li>
+              <a class="text-base text-nav-item-clr">
+                Blog
+                <img src="./images/right-angle.svg" />
+              </a>
+            </li>
+            <li>
+              <a class="text-base text-nav-item-clr">
+                Contact Us
+                <img src="./images/right-angle.svg" />
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="">
+          <a class="btn bg-primary-bg text-white text-lg font-semibold normal-case ">Free Consultation</a>
+        </div>
+      </nav>
+      <!-- banner/hero section  -->
+      <div class="hero min-h-[77vh] bg-hero-bg rounded-lg mt-10 ">
+        <div class="hero-overlay rounded-lg "></div>
+        <div class="hero-content text-center text-neutral-content">
+          <div class="max-w-[70%]">
+            <h1 class="mb-5 text-3xl sm:text-5xl md:text-7xl font-extrabold ff-eb_garamond text-white">We Provide Effective Legal Solutions</h1>
+            <p class="mb-5 text-base font-normal max-w-[75%] mx-auto">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour.</p>
+            <!-- banner search box  -->
+            <div class="max-w-[70%] mx-auto flex flex-col gap-5 sm:gap-3 sm:flex-row mt-10">
+                <input type="text" placeholder="Type here" class="p-[11px_20px] w-full max-[639.98px]:max-w-full sm:max-w-full mx-auto text-[#A0A0A0] border-none outline-none rounded-lg"/>
+                <button class="btn bg-primary-bg border-none max-[639.98px]:max-w-[50%]_mx-auto">Search</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+  </body>
 </html>
